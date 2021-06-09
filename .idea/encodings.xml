@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/BookingService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BookingService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CarService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CarService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PaymentService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PaymentService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RentService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/RentService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Report" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Report/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SessionService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SessionService/src/main/java" charset="UTF-8" />
+  </component>
+</project>

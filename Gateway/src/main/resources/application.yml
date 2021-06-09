@@ -1,0 +1,48 @@
+server:
+  port: 10010 #服务端口
+spring:
+  application:
+    name: gateway #指定服务名
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5 # 获取服务列表的周期：5s
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+
+zuul:
+  sensitive-headers: Access-Control-Allow-Origin
+  ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken,Authorization
+  routes:
+    #    8181
+    car-service:
+      path: /car/**
+      serviceId: car-service
+    #8182 rent-service
+    rent-service:
+      path: /office/**
+      serviceId: rent-service
+    #8183 session-service
+    session-service:
+      path: /session/**  #映射路径
+      serviceId: session-service # 指定服务端的名称
+    #8184 booking-service
+    booking-service:
+      path: /booking/**
+      serviceId: booking-service
+    #    8185 payment-service
+    payment-service:
+      path: /payment/**
+      serviceId: payment-service
+    #    8186 report-service
+    report-service:
+      path: /reports/**  #映射路径
+      serviceId: report-service # 指定服务端的名称
+
+    host:
+      connect-timeout-millis: 150000 #HTTP连接超时大于Hystrix的超时时间
+      socket-timeout-millis: 600000   #socket超时
+
+ribbon:
+  ReadTimeout: 10000  #请求处理的超时时间
+  ConnectTimeout: 10000  #请求连接的超时时间

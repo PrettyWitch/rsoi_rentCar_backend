@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    #    ?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    #    jdbc:mysql://localhost:3306/library
+    #    com.mysql.cj.jdbc,Driver
+    #    jdbc:postgresql://localhost:5432/db1
+    url: jdbc:mysql://localhost:3306/library?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: booking-service
+
+  jpa:
+    #    展示sql语句
+    show-sql: true
+    hibernate:
+      #      update：加载hibernate时根据实体类model创建数据库表，这是表名的依据是@Entity注解的值或者@Table注解的值，sessionFactory关闭表不会删除，且下一次启动会根据实体model更新结构或者有新的实体类会创建新的表。
+      ddl-auto: update
+    properties:
+      hibernate:
+        #        格式化，自动换行
+        format_sql: true
+  main:
+    allow-bean-definition-overriding: true
+server:
+  #  vue的端口已经是8080，所以手动设置端口
+  port: 8184
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka/
+  server:
+    enable-self-preservation: false # 关闭自我保护模式（缺省为打开）
+    eviction-interval-timer-in-ms: 1000 # 扫描失效服务的间隔时间（缺省为60*1000ms）
+
+  instance:
+    prefer-ip-address: true # 当调用getHostname获取实例的hostname时，返回ip而不是host名称
+    ip-address: localhost # 指定自己的ip信息，不指定的话会自己寻找
